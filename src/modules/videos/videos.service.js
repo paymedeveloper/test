@@ -2,7 +2,7 @@ import {model} from "../../models/videos.model.js";
 
 const findAllVideos = async () => {
     const allVideos = await model.find({})
-    return allVideos.map((video) => video.id)
+    return allVideos
 };
 
 const findAllActiveVideos = async () => {

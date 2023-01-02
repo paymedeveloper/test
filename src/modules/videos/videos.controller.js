@@ -3,7 +3,26 @@ import videoService from "./videos.service.js"
 const GET_ALL = async (req, res) => {
     try {
 
-        const data = await videoService.findAllVideos()
+        let data = await videoService.findAllVideos()
+
+        data = data.map((video) => video.id)
+
+        res.status(200).json({
+            message: "all videos",
+            data
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
+    }
+};
+
+const GET_ALL_DETAILS = async (req, res) => {
+    try {
+
+        let data = await videoService.findAllVideos()
 
         res.status(200).json({
             message: "all videos",
@@ -150,6 +169,7 @@ const DELETE_VIDEO = async (req, res) => {
 
 export default {
     GET_ALL,
+    GET_ALL_DETAILS,
     CREATE_ONE,
     GET_ALL_ACTIVE,
     GET_ALL_BLOCKED,
