@@ -1,0 +1,30 @@
+{
+  "name": "android-app-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": {
+    "email": "diyorbek.ru@payme.uz",
+    "name": "Diyorbek Rustamjonov",
+    "url": "https://diyorbek.ru"
+  },
+  "contributors": [
+    {
+      "email": "diyorbek.ru@payme.uz",
+      "name": "Diyorbek Rustamjonov",
+      "url": "https://diyorbek.ru"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.1"
+  }
+}
